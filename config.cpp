@@ -43,7 +43,7 @@ class CfgVehicles {
         category = "RR_Modules";
         function = "rr_zeus_anim_fnc_playAnimation";
         functionPriority = 1;
-        isGlobal = 1; // ZMĚNĚNO NA 1 pro dedikovaný server
+        isGlobal = 1; // NASTAVENO NA 1 pro dedikovaný server
         isTriggerActivated = 0;
         isDisposable = 1;
         curatorInfoType = "";

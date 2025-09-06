@@ -1,6 +1,5 @@
 /*
-    Nová funkce pro spuštění animace
-    Vytvoř tuto funkce jako: functions/fn_executeAnim.sqf
+    OPRAVENÁ verze pro spuštění animace
 */
 
 params ["_move", "_units"];
