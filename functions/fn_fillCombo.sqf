@@ -1,4 +1,3 @@
-
 disableSerialization;
 private _display = findDisplay 8000;
 private _ctrlCombo = _display displayCtrl 8004;

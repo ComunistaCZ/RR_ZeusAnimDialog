@@ -13,6 +13,7 @@ class CfgFunctions {
             class playAnimation {};
             class doAnimation {};
             class fillCombo {};
+            class openDialogClient {}; // New function for client-side dialog
         };
     };
 };
@@ -42,7 +43,7 @@ class CfgVehicles {
         category = "RR_Modules";
         function = "rr_zeus_anim_fnc_playAnimation";
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1; // Changed to global for multiplayer
         isTriggerActivated = 0;
         isDisposable = 1;
         curatorInfoType = "";

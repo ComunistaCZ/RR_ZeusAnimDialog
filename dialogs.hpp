@@ -11,7 +11,7 @@ class WS_Button {
 
     colorBackground[] = {0,0,0,0.7};
     colorBackgroundActive[] = {0,0,0,1};
-    colorBackgroundDisabled[] = {0.2,0.2,0.2,0.5};   // 🔥 doplněno
+    colorBackgroundDisabled[] = {0.2,0.2,0.2,0.5};
     colorFocused[] = {0,0,0,1};
 
     colorShadow[] = {0,0,0,0};
@@ -23,13 +23,12 @@ class WS_Button {
     soundEscape[] = {"",0.07,1};
 
     shadow = 2;
-    borderSize = 0;    // doporučeno doplnit
-    offsetX = 0;       // doporučeno doplnit
+    borderSize = 0;
+    offsetX = 0;
     offsetY = 0;
     offsetPressedX = 0;
     offsetPressedY = 0;
 };
-
 
 // === Base GUI classes (minimal) ===
 class RscText {
@@ -49,16 +48,6 @@ class RscEdit {
     autocomplete = "scripting";
     text = "";
 };
-/*
-class RscButton {
-    type = 1; idc = -1; style = 2;
-    x = 0; y = 0; w = 0.1; h = 0.04;
-    font = "RobotoCondensed"; sizeEx = 0.04;
-    colorBackground[] = {0.2,0.2,0.2,1};
-    colorText[] = {1,1,1,1};
-    text = "OK";
-};
-*/
 class RscCombo {
     type = 4; idc = -1; style = 0;
     x = 0; y = 0; w = 0.3; h = 0.04;
@@ -105,12 +94,11 @@ class RR_PlayAnimationDialog {
         };
 
         class Combo: RscCombo {
-        idc = 8004;
-        x = 0.31; y = 0.39; w = 0.38; h = 0.04;
-        onLBSelChanged = "_ctrl = _this select 0; _i = _this select 1; ctrlSetText [8001, _ctrl lbData _i];"; // zapíše className do inputu
+            idc = 8004;
+            x = 0.31; y = 0.39; w = 0.38; h = 0.04;
+            onLBSelChanged = "_ctrl = _this select 0; _i = _this select 1; ctrlSetText [8001, _ctrl lbData _i];";
             tooltip = "$STR_RR_ANIMDIALOG_COMBO_TOOLTIP";
         };
-
 
         class Confirm: WS_Button {
             idc = 8002;
@@ -119,7 +107,7 @@ class RR_PlayAnimationDialog {
             action = " \
                 private _move = ctrlText 8001; \
                 closeDialog 0; \
-                [_move, RR_anim_units] spawn rr_zeus_anim_fnc_doAnimation; \
+                [_move, RR_anim_units] call rr_zeus_anim_fnc_doAnimation; \
             ";
         };
 

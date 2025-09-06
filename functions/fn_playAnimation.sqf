@@ -1,10 +1,12 @@
 /*
     Spuštěno modulem → uloží jednotky a otevře dialog
+    Modified for multiplayer support
 */
 
 params ["_logic", "_units", "_activated"];
 
-if (!local _logic) exitWith {};
+// Only execute on server
+if (!isServer) exitWith {};
 
 // fallback: attached/nearest
 if (_units isEqualTo []) then {
@@ -20,17 +22,32 @@ if (_units isEqualTo []) then {
 };
 
 if (_units isEqualTo []) exitWith {
-    hint parseText format [
-        "<t color='#00BFFF'>%1</t>",
-        localize "STR_NO_UNIT_HINT"
-    ];
+    // Send hint to curator who placed the module
+    private _curator = getAssignedCuratorUnit _logic;
+    if (!isNull _curator) then {
+        [parseText format [
+            "<t color='#00BFFF'>%1</t>",
+            localize "STR_NO_UNIT_HINT"
+        ]] remoteExec ["hint", _curator];
+    };
 };
 
-// uložíme globálně, aby dialog věděl na koho
-RR_anim_units = _units;
+// Get the curator who placed this module
+private _curator = getAssignedCuratorUnit _logic;
+if (isNull _curator) exitWith {
+    // Fallback: find any curator
+    private _curators = allCurators;
+    if (count _curators > 0) then {
+        _curator = getAssignedCuratorUnit (_curators select 0);
+    };
+};
 
-// otevřít dialog
-createDialog "RR_PlayAnimationDialog";
-
+if (!isNull _curator) then {
+    // Send units data and open dialog on curator's client
+    [_units] remoteExec ["rr_zeus_anim_fnc_openDialogClient", _curator];
+} else {
+    // Fallback: open on all clients (not recommended but works)
+    [_units] remoteExec ["rr_zeus_anim_fnc_openDialogClient"];
+};
 
 deleteVehicle _logic;
