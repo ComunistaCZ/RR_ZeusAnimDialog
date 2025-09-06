@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RR_ZeusAnimDialog">
+    <Package name="RR_ZeusAnimDialog">
+        
+        <!-- Dialog title -->
+        <Key ID="STR_RR_ANIMDIALOG_TITLE">
+            <English>[44.RR]: Play animation</English>
+            <Czech>[44.RR]: Přehrát animaci</Czech>
+        </Key>
+
+        <!-- Labels -->
+        <Key ID="STR_RR_ANIMDIALOG_LABEL_INPUT">
+            <English>Enter animation or select from dropdown:</English>
+            <Czech>Zadej animaci nebo vyber z roletky:</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIMDIALOG_COMBO_TOOLTIP">
+            <English>Favorite animations</English>
+            <Czech>Oblíbené animace</Czech>
+        </Key>
+
+        <!-- Buttons -->
+        <Key ID="STR_RR_ANIMDIALOG_BTN_CONFIRM">
+            <English>Start</English>
+            <Czech>Spustit</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIMDIALOG_BTN_CANCEL">
+            <English>Cancel</English>
+            <Czech>Zrušit</Czech>
+        </Key>
+
+        <!-- HINT -->
+        <Key ID="STR_NO_UNIT_HINT">
+            <English>You haven't selected any units!</English>
+            <Czech>Nevybral jsi žádné jednotky!</Czech>
+        </Key>
+
+        <!-- ZEUS UI MODUL -->
+        <Key ID="STR_PLAY_ANIM_MODUL">
+            <English>[44.RR]: Play animation</English>
+            <Czech>[44.RR]: Přehrát animaci</Czech>
+        </Key>
+
+        <!-- ANIMATIONS -->
+        <Key ID="STR_RR_ANIM_Pray_Loop">
+            <English>Praying [Loop] (Required: cDLC WS)</English>
+            <Czech>Modlení [Loop] (Vyžaduje: cDLC WS)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_SittingWounded_Loop">
+            <English>Injured person [Loop]</English>
+            <Czech>Sedící zraněný [Loop]</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Surrender">
+            <English>Surrender [Loop]</English>
+            <Czech>Zajatec [Loop]</Czech>
+        </Key>
+
+        <Key ID="STR_RR_ANIM_Proslov1">
+            <English>Speech1 [Loop] (Required: A2C)</English>
+            <Czech>Proslov1 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Proslov2">
+            <English>Speech2 [Loop] (Required: A2C)</English>
+            <Czech>Proslov2 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Proslov3">
+            <English>Speech3 [Loop] (Required: A2C)</English>
+            <Czech>Proslov3 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Proslov4">
+            <English>Speech4 [Loop] (Required: A2C)</English>
+            <Czech>Proslov4 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Proslov5">
+            <English>Speech5 [Loop] (Required: A2C)</English>
+            <Czech>Proslov5 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+
+        <Key ID="STR_RR_ANIM_Protest1">
+            <English>Protest1 [Loop] (Required: A2C)</English>
+            <Czech>Protest1 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Protest2">
+            <English>Protest2 [Loop] (Required: A2C)</English>
+            <Czech>Protest2 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Protest3">
+            <English>Protest3 [Loop] (Required: A2C)</English>
+            <Czech>Protest3 [Loop] (Vyžaduje: A2C)</Czech>
+        </Key>
+
+        <Key ID="STR_RR_ANIM_Listening">
+            <English>Listening civ</English>
+            <Czech>Poslouchat civ</Czech>
+        </Key>
+        <Key ID="STR_RR_ANIM_Stop">
+            <English>STOP Animation</English>
+            <Czech>Stop Animace</Czech>
+        </Key>
+
+    </Package>
+</Project>
+
+
