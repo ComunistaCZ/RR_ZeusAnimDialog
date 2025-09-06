@@ -1,53 +1,51 @@
 /*
     Spuštěno modulem → uloží jednotky a otevře dialog
-    Modified for multiplayer support
+    OPRAVENÁ VERZE PRO MULTIPLAYER
 */
 
 params ["_logic", "_units", "_activated"];
 
-// Only execute on server
-if (!isServer) exitWith {};
+// Debug výpis
+diag_log format ["[RR_ANIM] Module executed - Logic: %1, Units: %2, Server: %3", _logic, _units, isServer];
 
 // fallback: attached/nearest
 if (_units isEqualTo []) then {
     private _attached = attachedTo _logic;
     if (!isNull _attached) then {
         _units = [_attached];
+        diag_log format ["[RR_ANIM] Using attached unit: %1", _attached];
     } else {
-        private _nearest = nearestObjects [getPos _logic, ["Man"], 3];
+        private _nearest = nearestObjects [getPos _logic, ["Man"], 10]; // zvětšil jsem dosah na 10m
         if (count _nearest > 0) then {
             _units = [_nearest select 0];
+            diag_log format ["[RR_ANIM] Using nearest unit: %1", _nearest select 0];
         };
     };
 };
 
 if (_units isEqualTo []) exitWith {
-    // Send hint to curator who placed the module
-    private _curator = getAssignedCuratorUnit _logic;
-    if (!isNull _curator) then {
-        [parseText format [
-            "<t color='#00BFFF'>%1</t>",
-            localize "STR_NO_UNIT_HINT"
-        ]] remoteExec ["hint", _curator];
-    };
+    diag_log "[RR_ANIM] No units found!";
+    hint parseText format [
+        "<t color='#FF0000'>%1</t>",
+        "Žádné jednotky nenalezeny!"
+    ];
 };
 
-// Get the curator who placed this module
-private _curator = getAssignedCuratorUnit _logic;
-if (isNull _curator) exitWith {
-    // Fallback: find any curator
-    private _curators = allCurators;
-    if (count _curators > 0) then {
-        _curator = getAssignedCuratorUnit (_curators select 0);
-    };
-};
+diag_log format ["[RR_ANIM] Found units: %1", _units];
 
-if (!isNull _curator) then {
-    // Send units data and open dialog on curator's client
-    [_units] remoteExec ["rr_zeus_anim_fnc_openDialogClient", _curator];
-} else {
-    // Fallback: open on all clients (not recommended but works)
-    [_units] remoteExec ["rr_zeus_anim_fnc_openDialogClient"];
+// JEDNODUCHÉ ŘEŠENÍ - otevři dialog lokálně na tom kdo umístil modul
+if (hasInterface) then {
+    diag_log "[RR_ANIM] Opening dialog locally";
+    
+    // uložíme globálně, aby dialog věděl na koho
+    RR_anim_units = _units;
+    
+    // otevřít dialog
+    [] spawn {
+        sleep 0.1; // malé zpoždění pro jistotu
+        createDialog "RR_PlayAnimationDialog";
+        diag_log "[RR_ANIM] Dialog should be open now";
+    };
 };
 
 deleteVehicle _logic;
