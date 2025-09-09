@@ -15,11 +15,11 @@ RR_anim_units = _units;
 
 // Otevři dialog s malým zpožděním
 [] spawn {
-    sleep 0.1;
+    //sleep 0.1;
     if (createDialog "RR_PlayAnimationDialog") then {
         diag_log "[RR_ANIM] Dialog opened successfully";
     } else {
         diag_log "[RR_ANIM] ERROR: Failed to create dialog";
-        hint "Chyba: Dialog se nepodařilo otevřít!";
+        //hint "Chyba: Dialog se nepodařilo otevřít!";
     };
 };

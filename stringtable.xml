@@ -28,11 +28,17 @@
             <Czech>Zrušit</Czech>
         </Key>
 
-        <!-- HINT -->
+        <!-- HINTS -->
         <Key ID="STR_NO_UNIT_HINT">
             <English>You haven't selected any units!</English>
             <Czech>Nevybral jsi žádné jednotky!</Czech>
         </Key>
+
+        <Key ID="STR_HINT_DialOpen">
+            <English>Dialogue opened!</English>
+            <Czech>Dialog otevřen!</Czech>
+        </Key>
+
 
         <!-- ZEUS UI MODUL -->
         <Key ID="STR_PLAY_ANIM_MODUL">

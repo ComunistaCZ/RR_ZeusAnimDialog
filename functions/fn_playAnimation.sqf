@@ -74,13 +74,13 @@ RR_openDialogOnClient = {
     RR_anim_units = _units;
     
     [] spawn {
-        sleep 0.2;
+        //sleep 0.2;
         if (createDialog "RR_PlayAnimationDialog") then {
             diag_log "[RR_ANIM] Dialog opened successfully on client!";
-            hint "Dialog otevřen!";
+            //hint localize "STR_HINT_DialOpen";
         } else {
             diag_log "[RR_ANIM] ERROR: Failed to create dialog on client!";
-            hint "CHYBA: Dialog se neotevřel!";
+            //hint "CHYBA: Dialog se neotevřel!";
         };
     };
 };
