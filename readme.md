@@ -113,10 +113,13 @@ Find more animations:
 - In-game Animation Viewer (Editor > Tools > Animation Viewer)
 
 ## Planned Features
-- **Activation only on selected unit** – možnost aplikace animace pouze na jednotku, na kterou byl modul umístěn  
-- **Animation category selection** – rozbalovací nabídky (dropdown menu) pro snadnější filtrování a výběr animací  
-- **Improved custom animation support** – lepší podpora pro přidání vlastních animací, pravděpodobně pomocí CBA nastavení  
-- **Enhanced localization** – přesnější a kvalitnější překlad (CZ/EN a možnost rozšíření o další jazyky)  
+- **Activation only on selected unit** – the animation can be applied only to the unit where the module is placed  
+- **Animation category selection** – dropdown menus for easier filtering and selection of animations  
+- **Improved custom animation support** – better support for adding custom animations, likely via CBA settings  
+- **Enhanced localization** – more accurate and higher-quality translations (CZ/EN) with the possibility to add more languages  
+- **Loop support** – the ability to enable looping even for animations that are not looped by default  
+- **Combat Ready mode** – animations are automatically interrupted if the unit switches to combat mode  
+
 
 ## Changelog
 
