@@ -1,9 +1,8 @@
-disableSerialization;
-private _display = findDisplay 8000;
-private _ctrlCombo = _display displayCtrl 8004;
-lbClear _ctrlCombo;
+/*
+    Funkce pro naplnění dropdown menu animacemi
+    Volána při otevření dialogu
+*/
 
-// Seznam animací: [stringtableKey, className]
 disableSerialization;
 private _display = findDisplay 8000;
 private _ctrlCombo = _display displayCtrl 8004;
@@ -29,7 +28,7 @@ private _anims = [
 // Naplnění comboboxu
 {
     private _idx = _ctrlCombo lbAdd (localize (_x select 0));  // Načte lokalizovaný text z stringtable.xml
-    _ctrlCombo lbSetData [_idx, _x select 1];                  // Uloží className
+    _ctrlCombo lbSetData [_idx, (_x select 1)];                // Uloží className
 } forEach _anims;
 
 // Nastavit výchozí výběr na první položku v seznamu (pokud není prázdný)
