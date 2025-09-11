@@ -111,6 +111,7 @@ You can use any valid Arma 3 animation classname. Some examples:
 Find more animations:
 - [Arma 3 Animation Viewer](https://community.bistudio.com/wiki/Arma_3:_Animations)
 - In-game Animation Viewer (Editor > Tools > Animation Viewer)
+- [RR Zeus Animations Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3566269019) - Mod for additional animations (APL-SA)
 
 ## Planned Features
 - **Activation only on selected unit** – the animation can be applied only to the unit where the module is placed  
