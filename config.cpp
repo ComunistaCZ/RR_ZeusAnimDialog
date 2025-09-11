@@ -10,10 +10,11 @@ class CfgFunctions {
     class rr_zeus_anim {
         class functions {
             file = "\RR_ZeusAnimDialog\functions";
+            class initFunctions { postInit = 1; }; // PŘIDÁNO - inicializace při startu mise
             class playAnimation {};
             class doAnimation {};
             class fillCombo {};
-            class executeAnim {}; // PŘIDÁNO - nová funkce
+            class executeAnim {};
         };
     };
 };
