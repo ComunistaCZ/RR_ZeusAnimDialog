@@ -112,6 +112,12 @@ Find more animations:
 - [Arma 3 Animation Viewer](https://community.bistudio.com/wiki/Arma_3:_Animations)
 - In-game Animation Viewer (Editor > Tools > Animation Viewer)
 
+## Planned Features
+- **Activation only on selected unit** – možnost aplikace animace pouze na jednotku, na kterou byl modul umístěn  
+- **Animation category selection** – rozbalovací nabídky (dropdown menu) pro snadnější filtrování a výběr animací  
+- **Improved custom animation support** – lepší podpora pro přidání vlastních animací, pravděpodobně pomocí CBA nastavení  
+- **Enhanced localization** – přesnější a kvalitnější překlad (CZ/EN a možnost rozšíření o další jazyky)  
+
 ## Changelog
 
 ### v2.1 (Current)
@@ -136,9 +142,12 @@ Find more animations:
 - Very complex animations might need manual reset before applying new ones
 
 ## Credits
-- **Author**: [44.RR] Regiment
-- **Version**: 2.1
-- **License**: Free to use and modify with attribution
+- **Author**: [44.RR] 44. Ravens Regiment (Comunista_CZ)
+- **Version**: 2.1.43
+
+## License
+This project is licensed under the **Arma Public License - No Derivatives (APL-ND)**.  
+See the [Bohemia Interactive Community Wiki](https://www.bohemia.net/community/licenses/arma-public-license-nd) for details.
 
 ## Support
 For issues, suggestions, or contributions, please contact the 44.RR Regiment team or submit issues through the appropriate channels.
