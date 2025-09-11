@@ -12,18 +12,6 @@ A Zeus module for Arma 3 that allows game masters to easily apply animations to 
 - ✅ **Custom animation support** - Enter any animation classname manually
 - ✅ **First-use reliability** - Dialog opens correctly on first module placement
 
-## Installation
-
-### As a Mod
-1. Download the complete `RR_ZeusAnimDialog` folder
-2. Place it in your Arma 3 mods directory (e.g., `Arma 3/@RR_ZeusAnimDialog/Addons/RR_ZeusAnimDialog`)
-3. Load the mod on both server and all clients
-4. Grant Zeus access to players who need to use the animation module
-
-### As a Mission Script
-1. Copy the `RR_ZeusAnimDialog` folder to your mission root
-2. Ensure all files are included when packing the mission
-
 ## Usage
 
 ### Basic Usage
